@@ -7,7 +7,7 @@ loginButton.addEventListener("click",(e)=>{
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if(username == "numan" && password == "numan123"){
+    if(username == "" && password == ""){
         alert("You've successfully logged in. ");
         location.href='index.php';
     }else{
