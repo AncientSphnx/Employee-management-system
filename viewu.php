@@ -59,7 +59,6 @@
                             <th class="p-2 border">Email</th>
                             <th class="p-2 border">Department</th>
                             <th class="p-2 border">Post</th>
-                            <th class="p-2 border">Department number</th>
                             <th class="p-2 border">Address</th>
                             <th class="p-2 border">Mobile</th>
                             <th class="p-2 border">Delete</th>
@@ -76,7 +75,7 @@
                                         $result=mysqli_query($conn,$sql);
                                         if(mysqli_fetch_assoc($result))
                                         {  $count=1;
-                                            $sql="SELECT fname,lname,Department,designation,Address,Phone_number,D_no from employee,department where fname='$fname'";
+                                            $sql="SELECT fname,lname,Department,designation,Address,Phone_number from employee,department where fname='$fname'";
                                             $result1=mysqli_query($conn,$sql);
                                             while($rows=mysqli_fetch_assoc($result1))
                                             {             
@@ -87,7 +86,6 @@
                                                 <td class="p-2 text-center">'.$rows['lname'].'</td>
                                                 <td class="p-2 text-center">'.$rows['Department'].'</td>
                                                 <td class="p-2 text-center">'.$rows['designation'].'</td>
-                                                <td class="p-2 text-center">'.$rows['D_no'].'</td>
                                                 <td class="p-2 text-center">'.$rows['Address'].'</td>
                                                 <td class="p-2 text-center">'.$rows['Phone_number'].'</td>';
                                                 echo "<form  action='delete.php' method='post'>
@@ -120,7 +118,6 @@
                                 <td class="p-2 text-center">'.$rows['lname'].'</td>
                                 <td class="p-2 text-center">'.$rows['Department'].'</td>
                                 <td class="p-2 text-center">'.$rows['designation'].'</td>
-                                <td class="p-2 text-center">'.$rows['D_no'].'</td>
                                 <td class="p-2 text-center">'.$rows['Address'].'</td>
                                 <td class="p-2 text-center">'.$rows['Phone_number'].'</td>';
                                 echo "<form  action='delete.php' method='post'>
@@ -134,58 +131,7 @@
                         }
                         ?>
                         <?php endif; ?>
-                        <!--<div class="delete" id="delete">
-                        <?php 
-                        mysqli_select_db($conn,$dbName);
-                        $e_id=$_POST['e_id'];
-                        $sql="DELETE from employee 
-                              where E_id='$e_id'";
-                        $result1 = mysqli_query($conn,$sql);
-                        if($result1){
-                            echo "Employee deleted: ".$e_id;
-                        }
-                        ?>
-                        </div>-->
                         </tr>
-                        <!--<tr class="border-b hover:bg-gray-50">
-                            <td class="p-2 text-center">2</td>
-                            <td class="p-2 text-center"><img src="https://via.placeholder.com/50" alt="Photo" class="rounded-full"></td>
-                            <td class="p-2 text-center">Nick</td>
-                            <td class="p-2 text-center">nic@gmail.com</td>
-                            <td class="p-2 text-center"><span class="bg-green-500 text-white px-2 py-1 rounded-full text-sm">supervisor</span></td>
-                            <td class="p-2 text-center">IT Department</td>
-                            <td class="p-2 text-center">Supervisor</td>
-                            <td class="p-2 text-center">2020-04-24</td>
-                            <td class="p-2 text-center">melbourne</td>
-                            <td class="p-2 text-center">34343232</td>
-                            <td class="p-2 text-center"><a href="#" class="text-blue-500">✏️</a></td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="p-2 text-center">3</td>
-                            <td class="p-2 text-center"><img src="https://via.placeholder.com/50" alt="Photo" class="rounded-full"></td>
-                            <td class="p-2 text-center">mandy doe</td>
-                            <td class="p-2 text-center">staff@gmail.com</td>
-                            <td class="p-2 text-center"><span class="bg-green-500 text-white px-2 py-1 rounded-full text-sm">Staff</span></td>
-                            <td class="p-2 text-center">sales department</td>
-                            <td class="p-2 text-center">Receptionist</td>
-                            <td class="p-2 text-center">2020-04-22</td>
-                            <td class="p-2 text-center">melbourne</td>
-                            <td class="p-2 text-center">34543542</td>
-                            <td class="p-2 text-center"><a href="#" class="text-blue-500">✏️</a></td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="p-2 text-center">4</td>
-                            <td class="p-2 text-center"><img src="https://via.placeholder.com/50" alt="Photo" class="rounded-full"></td>
-                            <td class="p-2 text-center">Ranjeet karki</td>
-                            <td class="p-2 text-center">ranjitkarki2@gmail.com</td>
-                            <td class="p-2 text-center"><span class="bg-green-500 text-white px-2 py-1 rounded-full text-sm">admin</span></td>
-                            <td class="p-2 text-center">IT Department</td>
-                            <td class="p-2 text-center">Software Engineer</td>
-                            <td class="p-2 text-center">2020-04-23</td>
-                            <td class="p-2 text-center">Melbourne</td>
-                            <td class="p-2 text-center">34545433</td>
-                            <td class="p-2 text-center"><a href="#" class="text-blue-500">✏️</a></td>
-                        </tr>-->
                     </tbody>
                 </table>
             </div>
