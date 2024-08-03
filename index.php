@@ -23,28 +23,12 @@
                     <li onclick="window.location.href='view1.php';">View</li>
                 </ul>
             </li>
-            <li class="toggle-departmentsa">Users
+            <li class="toggle-departmentsa">Employee
                 <ul class="subsectiona">
                     <li onclick="window.location.href='createu.php';">Create User</li>
                     <li onclick="window.location.href='viewu.php';">View User</li>
                 </ul>
             </li>
-            <!--<li>Roles</li>
-            <li  onclick="window.location.href='permission.html';">Permissions</li>
-            <li onclick="window.location.href='leave.html';">Staff Leave</li>-->
-            <!--<li class="toggle-departmentso">Roles
-                <ul class="subsectiono">
-                    <li onclick="window.location.href='viewr.php';">View Roles</li>
-                </ul>
-            </li>
-            <li class="toggle-departmentso">Staff Leave
-                <ul class="subsectiono">
-                    <li onclick="window.location.href='approvel.html';">Approve Leave</li>
-                    <li onclick="window.location.href='leave.html';">Create Leave</li>
-                </ul>
-            </li>
-            <li onclick="window.location.href='notice.html';">Staff Notice</li>
-            <li onclick="window.location.href='mail.html';">Mail</li>-->
         </ul>
     </div>
     <div class="main-content">
@@ -54,17 +38,14 @@
         <div class="info-cards">
             <div class="card blue" href="count.php">employee: <?php include("count.php"); echo htmlspecialchars($total);  ?></div>
             <div class="card yellow">Department: <?php include("count.php"); echo htmlspecialchars($total1);  ?></div>
-            
-            <!--<div class="card red">Leave: 2</div>-->
-        </div>
         <div class="user-details">
-            <p>Email: inuman739@gmail.com</p>
-            <p>Address: India</p>
-            <p>Mobile number: 8296348812</p>
-            <p>Designation: Software Engineer</p>
-            <p>Start date: 2024-04-23</p>
-            <p>Department: IT Department</p>
-            <p>Role: admin</p>
+            <p>Email: Your Email/p>
+            <p>Address: Your address</p>
+            <p>Mobile number: Your phone number</p>
+            <p>Designation: Your DEsignation</p>
+            <p>Start date: Starting date</p>
+            <p>Department: Department</p>
+            <p>Role: Admin</p>
         </div>
         <div class="charts">
             <div>
