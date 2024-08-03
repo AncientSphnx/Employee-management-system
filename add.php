@@ -16,20 +16,7 @@ if (!$conn)
      die('Could not connect: '. mysqli_connect_error() );
 
 }
-/*function department(){
-    global $dbServername,$dbPassword,$dbName,$dbUsername;
-    $conn = mysqli_connect( $dbServername , $dbUsername , $dbPassword , $dbName );
-    $sql1="SELECT Name from department";
-    $result0=mysqli_query($conn,$sql1);
-    if($result0)
-    {
-    while($row1=mysqli_fetch_assoc($result0))
-    {
-        
-        echo "<option value=".$row1['Name'].">".$row1['Name']."</option>";
-    }
-    }
-}*/
+
 
 mysqli_select_db($conn,$dbName);
 $E_id=$_POST['E_id'];
